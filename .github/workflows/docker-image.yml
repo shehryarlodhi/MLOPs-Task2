@@ -23,10 +23,10 @@ jobs:
         pip install -r requirements.txt
 
     - name: Build Docker image
-      run: docker build . -t shehryarLodhi/sample
+      run: docker build . -t shehryarlodhi/mlops=task2
 
     - name: Log in to Docker Hub
       run: echo "${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
 
     - name: Push Docker image
-      run: docker push shehryarLodhi/mlops-task2:latest
+      run: docker push shehryarlodhi/mlops-task2:latest
